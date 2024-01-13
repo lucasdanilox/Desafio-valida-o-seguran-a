@@ -14,11 +14,11 @@ public class EventDTO {
 	@NotBlank(message = "Campo requerido")
 	private String name;
 
-	@Future(message = "A data deve ser no futuro")
+	@Future(message = "A data do evento não pode ser passada")
 	private LocalDate date;
 	private String url;
 
-	@NotNull(message = "O campo não deve ser nulo")
+	@NotNull(message = "Campo requerido")
 	private Long cityId;
 	
 	public EventDTO() {
