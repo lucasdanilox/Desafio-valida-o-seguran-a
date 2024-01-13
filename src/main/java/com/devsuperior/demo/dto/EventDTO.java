@@ -3,13 +3,22 @@ package com.devsuperior.demo.dto;
 import java.time.LocalDate;
 
 import com.devsuperior.demo.entities.Event;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public class EventDTO {
 	
 	private Long id;
+
+	@NotBlank(message = "Campo requerido")
 	private String name;
+
+	@Future(message = "A data deve ser no futuro")
 	private LocalDate date;
 	private String url;
+
+	@NotNull(message = "O campo não deve ser nulo")
 	private Long cityId;
 	
 	public EventDTO() {
